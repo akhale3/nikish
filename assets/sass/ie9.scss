@@ -4,27 +4,27 @@
 @import 'libs/skel';
 
 /*
-	Retrospect by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+  Retrospect by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
 /* Feature */
 
-	.feature {
-		.image {
-			width: 48%;
-			float: left;
-		}
+  .feature {
+    .image {
+      width: 48%;
+      float: left;
+    }
 
-		.content {
-			width: 52%;
-			float: left;
-		}
+    .content {
+      width: 52%;
+      float: left;
+    }
 
-		&:after {
-			content: '';
-			display: block;
-			clear: both;
-		}
-	}
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }

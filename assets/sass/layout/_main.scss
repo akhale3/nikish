@@ -10,18 +10,18 @@
 
 /* Main */
 
-	#main {
-		@include padding(5em, 0);
+  #main {
+    @include padding(5em, 0);
 
-		@include breakpoint(large) {
-			@include padding(4em, 0);
-		}
+    @include breakpoint(large) {
+      @include padding(4em, 0);
+    }
 
-		@include breakpoint(medium) {
-			@include padding(3em, 0);
-		}
+    @include breakpoint(medium) {
+      @include padding(3em, 0);
+    }
 
-		@include breakpoint(small) {
-			@include padding(2em, 0);
-		}
-	}
+    @include breakpoint(small) {
+      @include padding(2em, 0);
+    }
+  }

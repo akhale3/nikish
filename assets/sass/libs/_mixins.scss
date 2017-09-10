@@ -3,35 +3,35 @@
 /// Applies a sub-palette to all components within an element (as well as the element itself).
 /// @param {string} $p Sub-palette.
 @mixin color($p) {
-	@include color-typography($p);
-	@include color-section($p);
-	@include color-feature($p);
-	@include color-form($p);
-	@include color-list($p);
-	@include color-table($p);
-	@include color-button($p);
+  @include color-typography($p);
+  @include color-section($p);
+  @include color-feature($p);
+  @include color-form($p);
+  @include color-list($p);
+  @include color-table($p);
+  @include color-button($p);
 }
 
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
 @mixin icon($content: false) {
 
-	text-decoration: none;
+  text-decoration: none;
 
-	&:before {
+  &:before {
 
-		@if $content {
-			content: $content;
-		}
+    @if $content {
+      content: $content;
+    }
 
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		font-family: FontAwesome;
-		font-style: normal;
-		font-weight: normal;
-		text-transform: none !important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important;
 
-	}
+  }
 
 }
 
@@ -40,5 +40,5 @@
 /// @param {mixed} $lr Left/right padding.
 /// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
 @mixin padding($tb, $lr, $pad: (0,0,0,0)) {
-	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4));
+  padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4));
 }

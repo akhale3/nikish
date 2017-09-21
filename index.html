@@ -28,6 +28,33 @@
         <meta name="msapplication-TileColor" content="#FFFFFF">
         <meta name="msapplication-TileImage" content="images/favicon-144.png">
         <meta name="msapplication-config" content="images/browserconfig.xml">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            $("#formSubmit").click(function (e) {
+              e.preventDefault();
+
+							var data = {
+								name: $("#formName").val(),
+								email: $("#formEmail").val(),
+								message: $("#formMessage").val(),
+								rsvp: ($("input[id=rsvp-yes]:checked").val() === "on") ? "Y" : "N"
+							};
+
+							var jqxhr = $.ajax({
+								url: "https://script.google.com/macros/u/0/s/AKfycbzuv34uA2DRgEAmBkj7INDf1OkGJPCykRRzAkA2DPNngRGNN3U/exec",
+    						dataType: "jsonp",
+    						data: data,
+  							success: function (res) {
+    							console.log("Form submitted successfully!");
+								},
+								error: function (err) {
+									console.log(err);
+								}
+							});
+            });
+          });
+        </script>
     </head>
     <body class="landing">
 
@@ -101,17 +128,17 @@
                         <h2>RSVP</h2>
                         <p>We'd love for you to be present for our special occasion</p>
                     </header>
-                    <form action="#" method="POST">
+                    <form action="" method="POST">
                         <div class="container 75%">
                             <div class="row uniform 50%">
                                 <div class="6u 12u$(xsmall)">
-                                    <input name="name" placeholder="Name" type="text" />
+                                    <input id="formName" name="name" placeholder="Name" type="text" />
                                 </div>
                                 <div class="6u$ 12u$(xsmall)">
-                                    <input name="email" placeholder="Email" type="email" />
+                                    <input id="formEmail" name="email" placeholder="Email" type="email" />
                                 </div>
                                 <div class="12u$">
-                                    <textarea name="message" placeholder="Message" rows="4"></textarea>
+                                    <textarea id="formMessage" name="message" placeholder="Message" rows="4"></textarea>
                                 </div>
                                 <div class="6u 12u$(xsmall)">
                                     <input type="radio" id="rsvp-yes" name="priority" checked>
@@ -124,7 +151,7 @@
                             </div>
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" class="special" value="Submit" /></li>
+                            <li><input type="submit" id="formSubmit" class="special" value="Submit" /></li>
                             <li><input type="reset" class="alt" value="Reset" /></li>
                         </ul>
                     </form>

@@ -1766,12 +1766,6 @@ footer .copyright {
   }
 }
 
-@media (max-width: 767px) {
-  .story .pic-holder {
-    display: none;
-  }
-}
-
 .story .pic-holder:before {
   content: "";
   background-color: rgba(0, 0, 0, 0.5);

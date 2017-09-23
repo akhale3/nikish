@@ -415,7 +415,7 @@
                 $("#loader").css("display", "inline-block");
                 $.ajax({
                     type: "POST",
-                    url: "mail.php",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSdXVB-bdluiwJcuQsS-YwuL8EhgjwWAE8O2GUz6rNgO30ZK3g/formResponse",
                     data: $(form).serialize(),
                     success: function () {
                         $( "#loader").hide();

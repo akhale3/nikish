@@ -356,7 +356,7 @@
         var map = new google.maps.Map(document.getElementById('map'), {
             center: new google.maps.LatLng(22.805434, 75.937981),
             zoom: 14,
-            scrollwheel: false,
+            scrollwheel: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP
 
         });
@@ -407,7 +407,7 @@
             messages: {
                 name: "Please enter your name",
                 email: "Please enter your email",
-                guest: "Select your number of guest",
+                guest: "Select your number of guests",
                 events: "Select your event list"
             },
 

@@ -415,7 +415,7 @@
                 $("#loader").css("display", "inline-block");
                 $.ajax({
                     type: "POST",
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSdXVB-bdluiwJcuQsS-YwuL8EhgjwWAE8O2GUz6rNgO30ZK3g/formResponse",
+                    url: "https://www.docs.google.com/forms/d/e/1FAIpQLSdXVB-bdluiwJcuQsS-YwuL8EhgjwWAE8O2GUz6rNgO30ZK3g/formResponse",
                     data: $(form).serialize(),
                     success: function () {
                         $( "#loader").hide();
@@ -427,10 +427,12 @@
                     },
                     error: function() {
                         $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
+                        // https://stackoverflow.com/questions/36342901/unable-to-handle-scenario-no-access-control-allow-origin-header-is-present-on
+                        $( "#success").slideDown( "slow" );
                         setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
+                        $( "#success").slideUp( "slow" );
                         }, 3000);
+                        form.reset();
                     }
                 });
                 return false; // required to block normal submit since you used ajax

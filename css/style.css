@@ -1947,6 +1947,10 @@ footer .copyright {
   position: relative;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 @media (max-width: 450px) {
   .events .main-ceremony ul li,
   .events .reception ul li,

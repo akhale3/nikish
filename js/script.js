@@ -12,6 +12,26 @@
         return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
     }
 
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
 
     // Toggle mobile navigation
     function toggleMobileNavigation() {
@@ -459,6 +479,15 @@
             if ($(".map").length) {
                 map();
             }
+
+            // Mobile browsers disable autoplay by default
+            // Set correct state on load
+            if (isMobile.any()) {
+                document.getElementById('music').pause();
+                $("#playPause").toggleClass('fa-pause fa-play');
+            } else {
+                document.getElementById('music').play();
+            }
         });
 
 
@@ -481,10 +510,10 @@
         var music = document.getElementById('music');
         if (music.paused) {
             music.play();
-            $("#playPause").toggleClass('fa-pause fa-play');
+            $("#playPause").toggleClass('fa-play fa-pause');
         } else {
             music.pause();
-            $("#playPause").toggleClass('fa-play fa-pause');
+            $("#playPause").toggleClass('fa-pause fa-play');
         }
     }
 

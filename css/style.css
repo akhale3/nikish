@@ -2833,4 +2833,9 @@ footer .copyright {
   visibility: hidden;
 }
 
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 /*# sourceMappingURL=style.css.map */

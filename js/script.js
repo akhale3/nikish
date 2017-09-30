@@ -296,7 +296,19 @@
     if ($(".bquotes-slider").length) {
         $(".bquotes-slider").owlCarousel({
             items: 1,
-            loop: true
+            loop: true,
+            autoplay: true
+        });
+    }
+
+    /*------------------------------------------
+        = ACTIVE MAPS SLIDER
+    -------------------------------------------*/
+    if ($(".maps-slider").length) {
+        $(".maps-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true
         });
     }
 

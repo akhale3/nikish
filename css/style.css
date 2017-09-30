@@ -2100,6 +2100,26 @@ footer .copyright {
 }
 
 /*--------------------------------------------------------------
+# maps-slider
+--------------------------------------------------------------*/
+.maps-slider .owl-dots .owl-dot {
+  margin-right: 7px;
+}
+
+.maps-slider .owl-dots .owl-dot span {
+  width: 17px !important;
+  height: 17px !important;
+  background-color: #aa9a45;
+  border: 4px solid #615828;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.maps-slider .owl-dots .active span {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
 # bquotes
 --------------------------------------------------------------*/
 .bquotes {

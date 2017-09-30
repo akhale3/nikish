@@ -107,8 +107,14 @@
             </nav>
 
             <div class="logo-bottom-shape-wrapper container">
-                <div class="logo-bottom-shape wow fadeInDown" data-wow-delay="4s">
+                <div class="logo-bottom-shape wow fadeInDown">
                     <span>A <i class="fa fa-heart"></i> N</span>
+                </div>
+            </div>
+
+            <div id="musicController" class="logo-bottom-shape-wrapper container">
+                <div class="logo-right-shape wow fadeInDown">
+                    <span><i id="playPause" class="fa fa-pause"></i></span>
                 </div>
             </div>
         </header>
@@ -716,7 +722,11 @@
     </div>
     <!-- end of page-wrapper -->
 
-
+    <!-- Autoplay audio -->
+    <audio id="music" autoplay loop>
+      <source src="audio/ThinkingOutLoud.ogg" type="audio/ogg"></source>
+      <source src="audio/ThinkingOutLoud.ogg" type="audio/mpeg"></source>
+    </audio>
 
     <!-- All JavaScript files
     ================================================== -->

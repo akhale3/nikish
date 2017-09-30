@@ -604,6 +604,11 @@ ul {
   opacity: 1 !important;
 }
 
+.sticky .logo-right-shape {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 @-webkit-keyframes navigationFlipIn {
   from {
     -webkit-transform: translateY(-100%);
@@ -1013,6 +1018,87 @@ header #navbar .navbar-nav > .open > a:hover {
   -o-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.logo-bottom-shape-wrapper .logo-right-shape {
+  position: absolute;
+  right: 80px;
+  z-index: 20;
+}
+
+@media (max-width: 767px) {
+  .logo-bottom-shape-wrapper .logo-right-shape {
+    right: 58px;
+  }
+}
+
+.logo-bottom-shape-wrapper .logo-right-shape span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  top: 12px;
+  z-index: 100;
+}
+
+@media (max-width: 767px) {
+  .logo-bottom-shape-wrapper .logo-right-shape span {
+    font-size: 14px;
+    top: 8px;
+  }
+}
+
+.logo-bottom-shape-wrapper .logo-right-shape i {
+  color: #fff;
+  -webkit-animation: pulse 0.8s infinite;
+  animation: pulse 0.8s infinite;
+}
+
+.logo-bottom-shape-wrapper .logo-right-shape:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-top: 60px solid rgba(170, 154, 69, 0.9);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .logo-bottom-shape-wrapper .logo-right-shape:before {
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 50px solid rgba(170, 154, 69, 0.9);
+  }
+}
+
+.logo-bottom-shape-wrapper .logo-right-shape:after {
+  content: "";
+  width: 185px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#musicController {
+  cursor: pointer;
+}
+
+#playPause {
+  width: 15px;
 }
 
 /*--------------------------------------------------------------

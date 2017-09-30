@@ -474,5 +474,21 @@
         parallaxFlower();
     });
 
+    /*==========================================================================
+        TOGGLE AUDIO PLAY/PAUSE
+    ==========================================================================*/
+    function togglePlay() {
+        var music = document.getElementById('music');
+        if (music.paused) {
+            music.play();
+            $("#playPause").toggleClass('fa-pause fa-play');
+        } else {
+            music.pause();
+            $("#playPause").toggleClass('fa-play fa-pause');
+        }
+    }
+
+    $('#musicController').click(togglePlay);
+
 
 })(window.jQuery);

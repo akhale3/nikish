@@ -1992,12 +1992,20 @@ footer .copyright {
 
 .events .main-ceremony > h3,
 .events .main-ceremony > ul,
+.events .main-ceremony .event-note,
 .events .reception > h3,
 .events .reception > ul,
 .events .bachalor-party > h3,
 .events .bachalor-party > ul {
   position: relative;
   z-index: 10;
+}
+
+.events .main-ceremony .event-note {
+  font-size: 14px;
+  color: #505050;
+  margin-bottom: 8px;
+  position: relative;
 }
 
 .events .main-ceremony h3,
